@@ -7,7 +7,6 @@ app.use(cors())
 app.use(bodyParser.json());
 
 app.post('/events', (req, res) => {
-    const { event, data } = req.body;
     try {
         axios.post('http://localhost:3001/events', req.body)
         axios.post('http://localhost:3002/events', req.body)
